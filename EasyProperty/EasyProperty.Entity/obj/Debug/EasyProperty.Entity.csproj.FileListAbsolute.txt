@@ -1,0 +1,5 @@
+\\psf\Home\Desktop\vsprojects\EasyProperty\EasyProperty\EasyProperty.Entity\bin\Debug\EasyProperty.Entity.dll
+\\psf\Home\Desktop\vsprojects\EasyProperty\EasyProperty\EasyProperty.Entity\bin\Debug\EasyProperty.Entity.pdb
+\\psf\Home\Desktop\vsprojects\EasyProperty\EasyProperty\EasyProperty.Entity\obj\Debug\EasyProperty.Entity.dll
+\\psf\Home\Desktop\vsprojects\EasyProperty\EasyProperty\EasyProperty.Entity\obj\Debug\EasyProperty.Entity.pdb
+\\psf\Home\Desktop\vsprojects\EasyProperty\EasyProperty\EasyProperty.Entity\obj\Debug\EasyProperty.Entity.csprojResolveAssemblyReference.cache

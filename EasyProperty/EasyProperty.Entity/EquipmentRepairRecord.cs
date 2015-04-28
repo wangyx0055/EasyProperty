@@ -31,6 +31,9 @@ namespace EasyProperty.Entity
         [ForeignKey("Equipment")]
         public int EquipmentID { get; set; }
 
+
+        public virtual Equipment Equipment { get; set; }
+
         /// <summary>
         /// 维修原因
         /// </summary>

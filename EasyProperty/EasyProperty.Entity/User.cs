@@ -22,6 +22,8 @@ namespace EasyProperty.Entity
 
         public string Password { get; set; }
 
+        public string RealName { get; set; }
+
         public int UserRoleAsInt { get; set; }
 
         [NotMapped]

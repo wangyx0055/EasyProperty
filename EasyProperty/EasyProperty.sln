@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyProperty.WebApp", "Easy
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyProperty.Entity", "EasyProperty.Entity\EasyProperty.Entity.csproj", "{C548EF31-CB30-4CE9-A50E-FE5B26829ADA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyProperty.Common", "EasyProperty.Common\EasyProperty.Common.csproj", "{A1D9E946-07FC-49DF-8562-10384BF085FF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{C548EF31-CB30-4CE9-A50E-FE5B26829ADA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C548EF31-CB30-4CE9-A50E-FE5B26829ADA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C548EF31-CB30-4CE9-A50E-FE5B26829ADA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A1D9E946-07FC-49DF-8562-10384BF085FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1D9E946-07FC-49DF-8562-10384BF085FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1D9E946-07FC-49DF-8562-10384BF085FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1D9E946-07FC-49DF-8562-10384BF085FF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

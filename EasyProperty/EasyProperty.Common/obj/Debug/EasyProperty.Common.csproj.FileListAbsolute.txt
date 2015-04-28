@@ -1,0 +1,4 @@
+\\psf\Home\Desktop\vsprojects\EasyProperty\EasyProperty\EasyProperty.Common\bin\Debug\EasyProperty.Common.dll
+\\psf\Home\Desktop\vsprojects\EasyProperty\EasyProperty\EasyProperty.Common\bin\Debug\EasyProperty.Common.pdb
+\\psf\Home\Desktop\vsprojects\EasyProperty\EasyProperty\EasyProperty.Common\obj\Debug\EasyProperty.Common.dll
+\\psf\Home\Desktop\vsprojects\EasyProperty\EasyProperty\EasyProperty.Common\obj\Debug\EasyProperty.Common.pdb

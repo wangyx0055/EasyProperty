@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace EasyProperty.Entity
 {
-    public enum Role
+    public enum UserRole
     { 
         一般管理员,
         超级管理员
@@ -22,7 +22,15 @@ namespace EasyProperty.Entity
 
         public string Password { get; set; }
 
-        public Role Role { get; set; }
+        public int UserRoleAsInt { get; set; }
+
+        [NotMapped]
+        public UserRole Role 
+        {
+            get { return (UserRole)UserRoleAsInt; }
+
+            set { UserRoleAsInt = (int)value; }
+        }
 
         public string Remark { get; set; }
 

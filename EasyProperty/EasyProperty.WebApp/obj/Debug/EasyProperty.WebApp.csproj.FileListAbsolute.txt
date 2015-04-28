@@ -72,3 +72,5 @@
 \\psf\Home\Desktop\vsprojects\EasyProperty\EasyProperty\EasyProperty.WebApp\bin\zh-Hans\Microsoft.Owin.Security.MicrosoftAccount.resources.dll
 \\psf\Home\Desktop\vsprojects\EasyProperty\EasyProperty\EasyProperty.WebApp\obj\Debug\EasyProperty.WebApp.dll
 \\psf\Home\Desktop\vsprojects\EasyProperty\EasyProperty\EasyProperty.WebApp\obj\Debug\EasyProperty.WebApp.pdb
+\\psf\Home\Desktop\vsprojects\EasyProperty\EasyProperty\EasyProperty.WebApp\bin\EasyProperty.Entity.dll
+\\psf\Home\Desktop\vsprojects\EasyProperty\EasyProperty\EasyProperty.WebApp\bin\EasyProperty.Entity.pdb

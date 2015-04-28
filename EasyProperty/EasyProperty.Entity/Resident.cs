@@ -7,6 +7,10 @@ using System.Threading.Tasks;
 
 namespace EasyProperty.Entity
 {
+
+    /// <summary>
+    /// 住户
+    /// </summary>
     [Table("T_Resident")]
     public class Resident
     {
@@ -45,6 +49,18 @@ namespace EasyProperty.Entity
         /// </summary>
         public DateTime CheckInTime { get; set; }
 
+        
+        /// <summary>
+        /// 是否是业主
+        /// </summary>
+        public bool IsProprietor { get; set; }
 
+
+        /// <summary>
+        ///  如果是业主 对应的业主ID
+        /// </summary>
+        public int? ProprietorID { get; set; }
+
+       
     }
 }

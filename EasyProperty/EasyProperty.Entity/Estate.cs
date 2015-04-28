@@ -16,15 +16,12 @@ namespace EasyProperty.Entity
         public int ID { get; set; }
 
         /// <summary>
-        ///  户主地址
+        /// 业主ID
         /// </summary>
-        public string HouseHolderAddress { get; set; }
+        [ForeignKey("Proprietor")]
+        public int? ProprietorID { get; set; }
 
-
-        /// <summary>
-        /// 户主名
-        /// </summary>
-        public string HouseHolderName { get; set; }
+        public virtual Proprietor Proprietor { get; set; }
 
         /// <summary>
         ///  土地号
@@ -45,6 +42,27 @@ namespace EasyProperty.Entity
         ///  建筑面积
         /// </summary>
         public double BuildingArea { get; set; }
+
+        /// <summary>
+        /// 建筑结构
+        /// </summary>
+        public string BuildingStructure { get; set; }
+
+        /// <summary>
+        /// 是否出售
+        /// </summary>
+        public bool IsSelled { get; set; }
+
+        /// <summary>
+        /// 出售信息
+        /// </summary>
+        public string SellInfo { get; set; }
+
+
+        /// <summary>
+        /// 添加房产时间
+        /// </summary>
+        public DateTime Time { get; set; }
 
     }
 }

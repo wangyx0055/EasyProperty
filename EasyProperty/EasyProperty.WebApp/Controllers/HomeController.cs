@@ -6,8 +6,10 @@ using System.Web.Mvc;
 
 namespace EasyProperty.WebApp.Controllers
 {
-    public class HomeController : Controller
+    [Authorize]
+    public class HomeController : BaseController
     {
+        
         // GET: Home
         public ActionResult Index()
         {

@@ -71,6 +71,18 @@ namespace EasyProperty.WebApp.Controllers
         #endregion
 
 
+        #region 退出
+        /// <summary>
+        /// 退出
+        /// </summary>
+        /// <returns></returns>
+        [Route("Logout")]
+        public ActionResult Logout()
+        {
+            FormsAuthentication.SignOut();
+            return Redirect("Login");
+        } 
+        #endregion
 
     }
 }

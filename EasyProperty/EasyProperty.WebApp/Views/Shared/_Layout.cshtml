@@ -1,43 +1,59 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - 我的 ASP.NET 应用程序</title>
+    <title>@ViewBag.Title - 物业管理系统</title>
+
+
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="es-header">
         <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("应用程序名称", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            <div class="es-logo">
+                <img src="/Images/logo.png" class="es-logo-img" onclick="CloseToggle()" />
             </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("主页", "Index", "Home")</li>
-                    <li>@Html.ActionLink("关于", "About", "Home")</li>
-                    <li>@Html.ActionLink("联系方式", "Contact", "Home")</li>
-                </ul>
-                @Html.Partial("_LoginPartial")
+
+            <div class="es-header-user">
+                <img src="/User/Avatar/@ViewBag.CurrentUser.ID" class="es-header-user-icon" /><span class="es-header-user-name">@ViewBag.CurrentUser.Username</span> <a href="/Logout" class="label red es-header-logout">注销</a>
+            </div>
+        </div>
+        <div class="es-nav-item es-header-search">
+            <input type="text" class="search" id="txtSearchAll" placeholder="万能搜索" style="width: 90px" />
+            <a href="javascript:void(0)" id="btnAllSearch" data-toggle="SearchResult"><img src="/Images/search.png" /></a>
+            <div class="es-notification" id="SearchResult">
             </div>
         </div>
     </div>
-    <div class="container body-content">
-        @RenderBody()
-        <hr />
-        <footer>
-            <p>Copyright © 2015 Code Comb Inc. All rights reserved.</p>
-        </footer>
-    </div>
+    <div class="container">
+        <div class="es-left">
+            <div class="es-menu-item@(ViewContext.RouteData.Values["controller"].ToString()=="Home"?" active" :"")"><a href="/">首页</a></div>
+            <div class="es-menu-item@(ViewContext.RouteData.Values["controller"].ToString()=="Project"?" active" :"")"><a href="BasicInfo">基础信息管理</a></div>
+            <div class="es-menu-item@(ViewContext.RouteData.Values["controller"].ToString()== "Enterprise" ? " active" :"")"><a href="#">财务管理</a></div>
+            <div class="es-menu-item@(ViewContext.RouteData.Values["controller"].ToString()== "Alarm" ? " active" :"")"><a href="#">客户关系管理</a></div>
+            <div class="es-menu-item@(ViewContext.RouteData.Values["controller"].ToString()== "Report" ? " active" :"")"><a href="#">工程管理</a></div>
+            <div class="es-menu-item@(ViewContext.RouteData.Values["controller"].ToString()== "File" ? " active" :"")"><a href="#">物料管理</a></div>
+            <div class="es-menu-item@(ViewContext.RouteData.Values["controller"].ToString()=="Statistics"?" active" :"")"><a href="#">综合服务</a></div>
 
+            @if (ViewBag.CurrentUser.Role == EasyProperty.Entity.UserRole.超级管理员)
+            {
+            <div class="es-menu-item@(ViewContext.RouteData.Values["controller"].ToString()== "Employee" ? " active" :"")"><a href="/Employee">员工管理</a></div>
+            <div class="es-menu-item@(ViewContext.RouteData.Values["controller"].ToString()== "System" ? " active" :"")"><a href="/System">系统设置</a></div>
+            }
+
+            <div class="es-menu-item@(ViewContext.RouteData.Values["controller"].ToString()=="User"?" active" :"")"><a href="/User">个人设置</a></div>
+        </div>
+        <div class="es-right">
+            @RenderBody()
+        </div>
+    </div>
+    <div class="es-footer">
+        Copyright © 2015 Code Comb Inc. All rights reserved.
+    </div>
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
